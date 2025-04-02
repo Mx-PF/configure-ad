@@ -1,16 +1,13 @@
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png" height="40%" width="70%"alt="Microsoft Active Directory Logo"/>
+<img src="https://i.imgur.com/pU5A58S.png" height="30%" width="70%"alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>Configuring Active Directory (On-Premises) Within Azure</h1>
+<h1>Configuring Active Directory Within Azure</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-<!-- <h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com) -->
-
-<h2>Environments and Technologies Used</h2>
+<h2>What You'll Need</h2>
+<h2>Environments and Technologies</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
@@ -219,7 +216,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <p>
   <img src="https://i.imgur.com/ZZCfiCp.png" height="75%" width="100%" alt="employee user accounts"/>
   <img src="https://i.imgur.com/7gBpNzN.png" height="75%" width="100%" alt="employee user selection"/>
-  <img src="https://i.imgur.com/cqsddjn.png" height="75%" width="100%" alt="employee user login"/>
 </p>
 <br />
 <br />
