@@ -103,14 +103,71 @@ Do the same for Domain, Private, and public profiles in the mini window. Hit apl
 <p> <img src="https://i.imgur.com/9z8e0i8.png" height="75%" width="100%" alt="resource group"/>
 <p>
   
-</p> Next we will set client-1's DNS settings to DC-1's private IP address.
+</p> Next we will set client-1's DNS settings to dc-1's private IP address.
 
 Within MS Azure you should see the private IP address under DC-1's VM overview. *Yours might be different from the picture*
 <img src="https://i.imgur.com/0kreVKa.png" height="75%" width="100%" alt="resource group"/>
 <p> 
-Once you have the IP address copied, Follow this quick guide in order to change client-1's DNS settings
-<p>
-  
-</p>
 
-[Configure AD YouTube](https://youtu.be/-c2Q286xcTc) 
+Once you have the IP address copied, Follow [this](https://youtu.be/-c2Q286xcTc) quick YouTube guide in order to change client-1's DNS settings
+<p> 
+*Again, the IP address may be different on your end.*
+
+</p>
+<p>
+<p>
+Next we restart 'Client-1' from the Azure portal. Click the Blue Square inside the red box and then click restart.
+</p>
+<img src="https://i.imgur.com/Km7XDxz.png" height="75%" width="100%" alt="resource group"/>
+<p>
+Next we will log into Client-1, and attempt to ping dc-1's public IP address.
+</p>
+To start with copy your Client-1's Public IP address, and use that to log into your remote desktop using your credentials from before.
+<p>
+<img src="https://i.imgur.com/6gQm1pW.png" height="75%" width="100%" alt="resource group"/>
+<p>
+This is how it'll look on Mac OS & Windows
+<p>
+<img src="https://i.imgur.com/K3n0L2h.png" height="75%" width="100%" alt="resource group"/>
+<img src="https://i.imgur.com/C2hyb6y.png" height="75%" width="100%" alt="resource group"/>
+<p>
+For your privacy, I'd also recommend saying no to all of these when logging in for the first time.
+<p>
+<img src="https://i.imgur.com/qjXtHya.png" height="75%" width="100%" alt="resource group"/>
+<p>
+
+Next we'll need dc-1's private IP address. Again it can be found in this overview page. *Might be a different number for you on your end.*
+</p>
+<img src="https://i.imgur.com/HqZIFtd.png" height="75%" width="100%" alt="resource group"/>
+<p>
+Back on Client-1, click the windows icon at the bottom left and search up Powershell.
+<p>
+You'll get something that looks like this below.
+</p>
+<img src="https://i.imgur.com/CWjjw1b.png" height="75%" width="100%" alt="resource group"/>
+<p>
+Within Powershell, type: ping 10.0.0.X
+<p>
+Replace the 'X' with the last number for YOUR dc-1's private IP and hit enter.
+</p>
+It should look something like the image below, and ping consecutively.
+<p>
+<img src="https://i.imgur.com/MflCnPx.png" height="75%" width="100%" alt="resource group"/>
+</p>
+If you see anything that says destination host unreachable, it means we did something incorrectly on the way.
+<p> Either Windows Firewall is still active, the IP address is incorrect, or its blocking ping. </p>
+<p>
+
+If you did it correctly next we will run: *ipconfig /all* within Powershell
+</p>
+Towards the end of your IP configuration you should see that the DNS server is the same as dc-1's Private IP.
+<p> 
+<img src="https://i.imgur.com/pq97tvF.png" height="75%" width="100%" alt="resource group"/>
+</p>
+If it looks completely different, then again we have missed a step down the way. 
+<p> 
+I'd recommend checking dc-1's firewall and make sure it off, as well as it's private IP to make sure it's copied correctly for your end.
+<P>
+What is yours looks similar to the image examples I've shown, then congratulations! 
+</P>
+Your simplistic AD Infrastructure is set!
