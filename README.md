@@ -1,10 +1,16 @@
+<h1 align="center"> Preparing a Domain Cotroller & Active Directory Infrastructure in AZURE </h1> 
+
 <p align="center">
 <img src="https://i.imgur.com/pU5A58S.png" height="30%" width="70%" alt="Microsoft Active Directory Logo"/>
 </p>
 
-# Preparing a Domain Cotroller & Active Directory Infrastructure in Azure
 
-This guide shows you how to set up Active Directory using Azure Virtual Machines.
+
+<p align="center"> This guide shows you how to set up Active Directory using Azure Virtual Machines. </p> 
+<p> 
+<p> 
+</p>
+
 
 ## Environments and Technologies
 - Microsoft Azure (to create Virtual Machines)
